@@ -1,5 +1,5 @@
 class Hand{
-  constructor(cards) {
+  constructor(cards =[]) {
     this.cards=cards;
   } 
   addCard(card) {
@@ -7,11 +7,10 @@ class Hand{
   }
   playCard(card) { 
     const index = this.cards.indexOf(card) 
-    if(index<-1) {
+    if(index > -1) {
 this.cards.splice(index ,1);
 return card
   }   else {
     return null;
   }
-
 }};
