@@ -27,7 +27,7 @@ class Deck {
 		const hands = [];
 		for (let i=0; i<numHands; i++){
 			const hand = new Hand();
-			for (let j=0; i<cardsPerHand; j++){
+			for (let j=0; j<cardsPerHand; j++){
 				const card = this.draw();
 				hand.addCard(card);
 			}
