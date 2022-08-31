@@ -20,6 +20,21 @@ class Deck {
 		return shuffle(this.cards);
 	
 	}
+	draw(){
+		return this.cards.pop();
+	}
+	deal(numHands, cardsPerHand){
+		const hands = [];
+		for (let i=0; i<numHands; i++){
+			const hand = new Hand();
+			for (let j=0; i<cardsPerHand; j++){
+				const card = this.draw();
+				hand.addCard(card);
+			}
+			hands.push(hand);
+		}
+		return hands;
+	}
 };
 function shuffle(array) {
 	let currentIndex = array.length,
